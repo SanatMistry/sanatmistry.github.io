@@ -1,0 +1,101 @@
+/* add custom scss here */
+/* 
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+// INDEX
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+// 1. INTRODUCTION
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+// 2. LOADER
+// ----------------------------------------------------------- */
+
+
+
+
+/* INTRODUCTION */
+.intro-wrapper {
+    min-height: 100vh;
+    padding: 0;
+    background-position: center;
+    background-size: 100vmax;
+    background-image:url(../images/intro-background.jpg);
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+.name {
+    font-size: 5vmax;
+}
+.designation {
+    font-size: 2vmax;
+    font-weight: bold;
+}
+.intro-content {
+    animation: fadeIn 4s linear;
+}
+@keyframes fadeIn {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    85% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 1px 2px 8px black;
+    position: fixed;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+/* LOADER */
+#loader {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    background-color: white;
+    padding: 0;
+}
+.loader-wrapper {
+    height: 100vh;
+}
+.loader-content {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: 100vmax;
+    background-image:url(../images/intro-background.jpg);
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    animation: loader 3s linear;
+}
+
+@keyframes loader {
+    0% {
+        width: 0vw;
+        height: 1px;
+    }
+    20% {
+        width: 10vw;
+    }
+    90% {
+        width: 100vw;
+        height: 1px;
+    }
+    100% {
+        height: 100vh;
+    }
+}
