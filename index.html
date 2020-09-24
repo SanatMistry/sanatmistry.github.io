@@ -20,28 +20,99 @@
     <!-- Page Content -->
     <div class="container-fluid p-0">
 
-        <!-- Introduction Start -->
-        <div id="home" onmousemove="moveCursor(event)" class="container-fluid intro-wrapper">
-            <div class="overlay"></div>
-            <div class="d-flex align-items-center flex-column intro-content">
-                <span class="name text-white">Sanat Mistry</span>
-                <span class="designation text-white">Frontend Developer </span>
-            </div>
+        <div onmousemove="moveCursor(event)" class="container-fluid intro-wrapper -gray">
+            <div>
+                
+                <div class="content-wrapper w-100">
+                    <!-- HOME SECTION START -->
+                    <div id="home" class="home d-flex section bg-indigo">
+                        <div class="title-wrapper d-flex w-100 p-5 text-white">
+                            <div class="display-pic"></div>
+                            <div class="title display-1">Sanat Mistry</div>
+                            <div class="designtion display-4">Frontend Developer</div>
+                        </div>
+                    </div>
+                    <!-- HOME SECTION END -->
 
-            <div id="cursor" class="cursor"></div>
+                    <!-- PROFILE SECTION START -->
+                    <div id="profile" class="profile section bg-indigo">
+                        <div class="display-1 secondary-font">Profile</div>
+                    </div>
+                    <!-- PROFILE SECTION END -->
 
-        </div>
-        <!-- Introduction End -->
+                    <!-- SKILLS SECTION START -->
+                    <div id="skills" class="skills section bg-purple">
+                        <div class="display-1 secondary-font">Skills</div>
+                    </div>
+                    <!-- SKILLS SECTION END -->
 
-        <!-- Page Loader Start -->
-        <div id="loader" class="container-fluid ">
-            <div class="d-flex align-items-center loader-wrapper">
-                <div class="loader-content">
-                    <div class="loader-overlay"></div>    
+                    <!-- EXPERIENCE SECTION START -->
+                    <div id="experience" class="experience section bg-maroon">
+                        <div class="display-1 secondary-font">Experience</div>
+                    </div>
+                    <!-- EXPERIENCE SECTION END -->
+
+                    <!-- PROJECTS SECTION START -->
+                    <div id="projects" class="projects section bg-peach">
+                        <div class="display-1 secondary-font">Projects</div>
+                    </div>
+                    <!-- PROJECTS SECTION END -->
+
+                    <!-- HIRE ME SECTION START -->
+                    <div  id="hireMe" class="hire-me section bg-light-blue">
+                        <div class="display-1 secondary-font">Hire Me</div>
+                    </div>
+                    <!-- HIRE ME SECTION END -->
+
                 </div>
+                
+
+                <!-- Navigation pane start -->
+                <div class="navigation-pane text-white">
+                    <div class="w-100 d-flex justify-content-sm-around align-items-center">
+                        <div class="nav-item-wrapper flex-grow-1 p-2 cp ">
+                            <div id="profile-nav" class="nav-item h-100 d-flex justify-content-center align-items-center">Profile</div>
+                            <div class="nav-item-selected h-100 d-flex justify-content-center align-items-center" onclick="navigateProfile()">Profile</div>
+                        </div>
+                        <div class="dot"></div>
+                        <div class="nav-item-wrapper flex-grow-1 p-2 cp ">
+                            <div id="skills-nav" class="nav-item h-100 d-flex justify-content-center align-items-center" onclick="navigateSkills()">Skills</div>
+                            <div class="nav-item-selected h-100 d-flex justify-content-center align-items-center" onclick="navigateSkills()">Skills</div>
+                        </div>
+                        <div class="dot"></div>
+                        <div class="nav-item-wrapper flex-grow-1 p-2 cp ">
+                            <div id="exp-nav" class="nav-item h-100 d-flex justify-content-center align-items-center" onclick="navigateExp()">Experience</div>
+                            <div class="nav-item-selected h-100 d-flex justify-content-center align-items-center" onclick="navigateExp()">Experience</div>
+                        </div>
+                        <div class="dot"></div>
+                        <div class="nav-item-wrapper flex-grow-1 p-2 cp ">
+                            <div id="projects-nav" class="nav-item h-100 d-flex justify-content-center align-items-center" onclick="navigateProjects()">Projects</div>
+                            <div class="nav-item-selected h-100 d-flex justify-content-center align-items-center" onclick="navigateProjects()">Projects</div>
+                        </div>
+                        <div class="dot"></div>
+                        <div class="nav-item-wrapper flex-grow-1 p-2 cp">
+                            <div id="contact-nav" class="nav-item h-100 d-flex justify-content-center align-items-center" onclick="navigateHireMe()">Contact</div>
+                            <div class="nav-item-selected h-100 d-flex justify-content-center align-items-center" onclick="navigateHireMe()">Contact</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation pane end -->
+                
+                <!-- Navigation menu start -->
+                <div class="navigation-menu-btn" onclick="openMenu()">o</div>
+                <div class="navigation-menu">
+                    <div class="close-btn" onclick="closeMenu()">x</div>
+                    <div>Profile</div>
+                    <div>Skills</div>
+                    <div>Experience</div>
+                    <div>Projects</div>
+                    <div>Contact</div>
+                </div>
+                <!-- Navigation menu end -->
             </div>
+            
+            <!-- <div id="cursor" class="cursor"></div> -->
         </div>
-        <!-- Page Loader End -->
     </div>
 
 
@@ -49,7 +120,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <!-- Custom JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="./js/custom.js"></script>
 </body>
 </html>

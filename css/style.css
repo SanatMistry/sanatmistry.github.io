@@ -9,44 +9,191 @@
 // -----------------------------------------------------------
 // -----------------------------------------------------------
 // 2. LOADER
+// ----------------------------------------------------------- 
+// ----------------------------------------------------------- 
+// Text Color
+// ----------------------------------------------------------- 
+// ----------------------------------------------------------- 
+// Background Color
+// ----------------------------------------------------------- 
+// ----------------------------------------------------------- 
+// General Classes
+// ----------------------------------------------------------- 
+// ----------------------------------------------------------- 
 // ----------------------------------------------------------- */
 
+@font-face {
+    font-family: 'raimondRegular';
+    src: url('raimond_free-webfont.woff2') format('woff2'),
+         url('raimond_free-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
+@font-face {
+    font-family: 'wedgieregular';
+    src: url('wedgie_regular-webfont.woff2') format('woff2'),
+         url('wedgie_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-/* INTRODUCTION */
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+ }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .navigation-pane {
+        display: none;
+    }
+    .navigation-menu-btn {
+        height: 50px;
+        width: 50px;
+        background-color: black;
+        position: fixed;
+        top: 2vh;
+        right: 2vh;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+    .navigation-menu-btn:hover {
+        border-radius: 50%;
+    }
+
+    .navigation-menu {
+        height: 100vh;
+        width: 100vw;
+        background-color: grey;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .navigation-menu .close-btn {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        background-color: black;
+        position: fixed;
+        top: 2vh;
+        right: 2vh;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+    
+
+ }
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+ }
+
+body {
+    margin: 0;
+}
+.section {
+    min-height: 100vh;
+}
 .intro-wrapper {
     min-height: 100vh;
     padding: 0;
-    background-position: center;
-    background-size: 100vmax;
-    background-image:url(../images/intro-background.jpg);
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
-.name {
-    font-size: 5vmax;
+.title-wrapper {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.designation {
-    font-size: 2vmax;
+.display-pic {
+    background-image: url('/images/profile.png');
+    height: 164px;
+    width: 164px;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.82);
+    top: 5vmin;
+    left: 5vmin;
+}
+.secondary-font {
+    font-family: 'wedgieregular';
+    font-size: 10vmin;
+}
+.tertiary-font {
+    font-family: raimondRegular;
+}
+
+
+
+/* NAVIGATION BAR */
+.navigation-pane {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+.navbar-margin {
+    margin-right: 144px;
+}
+.dot {
+    height: 5px;
+    min-width: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.nav-item-wrapper {
+    max-height: 75px;
+    min-height: 75px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.nav-item-wrapper:hover .nav-item {
+    animation: navItemHover 0.2s linear;
+    animation-fill-mode: forwards;
+    /* transform: translateY(-75px); */
+}
+.nav-item-wrapper:hover .nav-item-selected {
+    animation: navItemHover 0.2s linear; 
+    animation-fill-mode: forwards;
+    /* transform: translateY(-75px); */
+}
+.nav-item {
+    min-height: 75px;
+}
+.nav-item-selected {
+    min-height: 75px;
+    font-family: 'raimondRegular';
     font-weight: bold;
-}
-.intro-content {
-    animation: fadeIn 4s linear;
-}
-@keyframes fadeIn {
-    0%{
-        transform: translateY(-100px);
-        opacity: 0;
+    font-size: 24px;
+    /* transform: rotateZ(-16deg); */
+    /* text-decoration: underline; */
+} 
+@keyframes navItemHover {
+    from {
+        transform: translateY(0px);        
     }
-    85% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
+    to {
+        transform: translateY(-75px);
     }
 }
+
+/* CURSOR */
 .cursor {
     width: 20px;
     height: 20px;
@@ -58,44 +205,31 @@
 }
 
 
+/* TEXT COLOR */
+.text-peach {color: #c96567;}
+
+
+/* BACKGROUND COLOR */
+.bg-blue-gray {background-color: #222831;}
+.bg-indigo {background-color: #314455;}
+.bg-purple {background-color: #644e5b;}
+.bg-maroon {background-color: #9e5463;}
+.bg-peach {background-color: #c96567;}
+.bg-light-blue {background-color: #97aabd;}
 
 
 
-
-/* LOADER */
-#loader {
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    background-color: white;
-    padding: 0;
-}
-.loader-wrapper {
-    height: 100vh;
-}
-.loader-content {
-    height: 100vh;
-    width: 100vw;
-    background-position: center;
-    background-size: 100vmax;
-    background-image:url(../images/intro-background.jpg);
-    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
-    animation: loader 3s linear;
+/* GENERAL STYLES */
+.cp {
+    cursor: pointer;
 }
 
-@keyframes loader {
-    0% {
-        width: 0vw;
-        height: 1px;
-    }
-    20% {
-        width: 10vw;
-    }
-    90% {
-        width: 100vw;
-        height: 1px;
-    }
-    100% {
-        height: 100vh;
-    }
-}
+
+
+
+
+
+
+
+
+
