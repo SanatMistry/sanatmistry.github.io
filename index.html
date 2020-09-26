@@ -28,8 +28,13 @@
                     <div id="home" class="home d-flex section bg-indigo">
                         <div class="title-wrapper d-flex w-100 p-5 text-white">
                             <div class="display-pic"></div>
-                            <div class="title display-1">Sanat Mistry</div>
-                            <div class="designtion display-4">Frontend Developer</div>
+                            <!-- <div class="title display-1">Sanat Mistry</div>
+                            <div class="designtion display-4">Frontend Developer</div> -->
+                            <svg viewbox="0 0 1350 600">
+                                <text x="50%" y="50%" fill="transparent" text-anchor="middle">
+                                    Sanat Mistry
+                                </text>
+                            </svg>
                         </div>
                     </div>
                     <!-- HOME SECTION END -->
@@ -102,11 +107,11 @@
                 <div class="navigation-menu-btn" onclick="openMenu()">o</div>
                 <div class="navigation-menu">
                     <div class="close-btn" onclick="closeMenu()">x</div>
-                    <div>Profile</div>
-                    <div>Skills</div>
-                    <div>Experience</div>
-                    <div>Projects</div>
-                    <div>Contact</div>
+                    <div onclick="navigateProfile()">Profile</div>  
+                    <div onclick="navigateSkills()">Skills</div>
+                    <div onclick="navigateExp()">Experience</div>
+                    <div onclick="navigateProjects()">Projects</div>
+                    <div onclick="navigateHireMe()">Contact</div>
                 </div>
                 <!-- Navigation menu end -->
             </div>

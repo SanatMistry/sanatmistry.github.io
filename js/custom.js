@@ -26,28 +26,33 @@ function navigateHome() {
 }
 
 function navigateProfile() {
-    jQuery('html,body').animate({scrollTop: jQuery("#profile").offset().top - 75}, 'fast');
+    closeMenu();
+    jQuery('html,body').animate({scrollTop: jQuery("#profile").offset().top}, 'fast');
     jQuery('.nav-item').removeClass('nav-item-selected');
     jQuery('#profile-nav').addClass('nav-item-selected');
 }
 
 function navigateSkills() {
-    jQuery('html,body').animate({scrollTop: jQuery('#skills').offset().top - 75}, 'fast');
+    closeMenu();
+    jQuery('html,body').animate({scrollTop: jQuery('#skills').offset().top}, 'fast');
     jQuery('.nav-item').removeClass('nav-item-selected');
     jQuery('#skills-nav').addClass('nav-item-selected');
 }
 function navigateExp() {
-    jQuery('html,body').animate({scrollTop: jQuery('#experience').offset().top - 75}, 'fast');
+    closeMenu();
+    jQuery('html,body').animate({scrollTop: jQuery('#experience').offset().top}, 'fast');
     jQuery('.nav-item').removeClass('nav-item-selected');
     jQuery('#exp-nav').addClass('nav-item-selected');
 }
 function navigateProjects() {
-    jQuery('html,body').animate({scrollTop: jQuery('#projects').offset().top - 75}, 'fast');
+    closeMenu();
+    jQuery('html,body').animate({scrollTop: jQuery('#projects').offset().top}, 'fast');
     jQuery('.nav-item').removeClass('nav-item-selected');
     jQuery('#projects-nav').addClass('nav-item-selected');
 }
 function navigateHireMe() {
-    jQuery('html,body').animate({scrollTop: jQuery('#hireMe').offset().top - 75}, 'fast');
+    closeMenu();
+    jQuery('html,body').animate({scrollTop: jQuery('#hireMe').offset().top}, 'fast');
     jQuery('.nav-item').removeClass('nav-item-selected');
     jQuery('#comtact-nav').addClass('nav-item-selected');
 }
