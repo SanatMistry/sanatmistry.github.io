@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
-    
+<head> 
     <!-- Rersponsive viewport meta tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,114 +17,158 @@
 </head>
 <body onload="onPageLoad()">
     <!-- Page Content -->
-    <div class="container-fluid p-0">
+    <div class="page-content primary-bg">
 
-        <div onmousemove="moveCursor(event)" class="container-fluid intro-wrapper -gray">
-            <div>
-                
-                <div class="content-wrapper w-100">
-                    <!-- HOME SECTION START -->
-                    <div id="home" class="home d-flex section bg-indigo">
-                        <div class="title-wrapper d-flex w-100 p-5 text-white">
-                            <div class="display-pic"></div>
-                            <!-- <div class="title display-1">Sanat Mistry</div>
-                            <div class="designtion display-4">Frontend Developer</div> -->
-                            <svg viewbox="0 0 1350 600">
-                                <text x="50%" y="50%" fill="transparent" text-anchor="middle">
-                                    Sanat Mistry
-                                </text>
-                            </svg>
-                        </div>
-                    </div>
-                    <!-- HOME SECTION END -->
-
-                    <!-- PROFILE SECTION START -->
-                    <div id="profile" class="profile section bg-indigo">
-                        <div class="display-1 secondary-font">Profile</div>
-                    </div>
-                    <!-- PROFILE SECTION END -->
-
-                    <!-- SKILLS SECTION START -->
-                    <div id="skills" class="skills section bg-purple">
-                        <div class="display-1 secondary-font">Skills</div>
-                    </div>
-                    <!-- SKILLS SECTION END -->
-
-                    <!-- EXPERIENCE SECTION START -->
-                    <div id="experience" class="experience section bg-maroon">
-                        <div class="display-1 secondary-font">Experience</div>
-                    </div>
-                    <!-- EXPERIENCE SECTION END -->
-
-                    <!-- PROJECTS SECTION START -->
-                    <div id="projects" class="projects section bg-peach">
-                        <div class="display-1 secondary-font">Projects</div>
-                    </div>
-                    <!-- PROJECTS SECTION END -->
-
-                    <!-- HIRE ME SECTION START -->
-                    <div  id="hireMe" class="hire-me section bg-light-blue">
-                        <div class="display-1 secondary-font">Hire Me</div>
-                    </div>
-                    <!-- HIRE ME SECTION END -->
-
-                </div>
-                
-
-                <!-- Navigation pane start -->
-                <div class="navigation-pane text-white">
-                    <div class="w-100 d-flex justify-content-sm-around align-items-center">
-                        <div class="nav-item-wrapper flex-grow-1 p-2 cp ">
-                            <div id="profile-nav" class="nav-item h-100 d-flex justify-content-center align-items-center">Profile</div>
-                            <div class="nav-item-selected h-100 d-flex justify-content-center align-items-center" onclick="navigateProfile()">Profile</div>
-                        </div>
-                        <div class="dot"></div>
-                        <div class="nav-item-wrapper flex-grow-1 p-2 cp ">
-                            <div id="skills-nav" class="nav-item h-100 d-flex justify-content-center align-items-center" onclick="navigateSkills()">Skills</div>
-                            <div class="nav-item-selected h-100 d-flex justify-content-center align-items-center" onclick="navigateSkills()">Skills</div>
-                        </div>
-                        <div class="dot"></div>
-                        <div class="nav-item-wrapper flex-grow-1 p-2 cp ">
-                            <div id="exp-nav" class="nav-item h-100 d-flex justify-content-center align-items-center" onclick="navigateExp()">Experience</div>
-                            <div class="nav-item-selected h-100 d-flex justify-content-center align-items-center" onclick="navigateExp()">Experience</div>
-                        </div>
-                        <div class="dot"></div>
-                        <div class="nav-item-wrapper flex-grow-1 p-2 cp ">
-                            <div id="projects-nav" class="nav-item h-100 d-flex justify-content-center align-items-center" onclick="navigateProjects()">Projects</div>
-                            <div class="nav-item-selected h-100 d-flex justify-content-center align-items-center" onclick="navigateProjects()">Projects</div>
-                        </div>
-                        <div class="dot"></div>
-                        <div class="nav-item-wrapper flex-grow-1 p-2 cp">
-                            <div id="contact-nav" class="nav-item h-100 d-flex justify-content-center align-items-center" onclick="navigateHireMe()">Contact</div>
-                            <div class="nav-item-selected h-100 d-flex justify-content-center align-items-center" onclick="navigateHireMe()">Contact</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Navigation pane end -->
-                
-                <!-- Navigation menu start -->
-                <div class="navigation-menu-btn" onclick="openMenu()">o</div>
-                <div class="navigation-menu">
-                    <div class="close-btn" onclick="closeMenu()">x</div>
-                    <div onclick="navigateProfile()">Profile</div>  
-                    <div onclick="navigateSkills()">Skills</div>
-                    <div onclick="navigateExp()">Experience</div>
-                    <div onclick="navigateProjects()">Projects</div>
-                    <div onclick="navigateHireMe()">Contact</div>
-                </div>
-                <!-- Navigation menu end -->
+        <!-- NAVIGATION PANEL START -->
+        <div class="navigation-panel flexbox">
+            <div class="initial-wrapper">
+                <div id="initial-1" class="logo">S.</div>
+                <div class="name">Sanat</div>
             </div>
-            
-            <!-- <div id="cursor" class="cursor"></div> -->
+            <div id="menu" class="menu-btn">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+            <div class="nav-item-wrapper flexbox">
+                <div class="nav-item cp">
+                    <div class="icon">
+                        <img src="./icons/home-50-white.png">
+                    </div>
+                    <div class="title">HOME</div>
+                </div>
+                <div class="nav-item cp">
+                    <div class="icon">
+                        <img src="./icons/person-50-white.png">
+                    </div>
+                    <div class="title">ABOUT</div>
+                </div>
+                <div class="nav-item cp">
+                    <div class="icon">
+                        <img src="./icons/rubik's-cube-50-white.png">
+                    </div>
+                    <div class="title">SKILLS</div>
+                </div>
+                <div class="nav-item cp">
+                    <div class="icon">
+                        <img src="./icons/laptop-coding-50-white.png">
+                    </div>
+                    <div class="title">MY WORK</div>
+                </div>
+                <div class="nav-item cp">
+                    <div class="icon">
+                        <img src="./icons/important-mail-50-white.png">
+                    </div>
+                    <div class="title">CONTACT</div>
+                </div>
+            </div>
         </div>
+        <!-- NAVIGATION PANEL END -->
+
+        
+
+        <!-- HOME START -->
+        <div class="home-container flexbox">
+            <div class="home-content">
+                <div class="line-1">
+                    <div class="text-wrapper">H</div>
+                    <div class="text-wrapper">i</div>
+                    <div class="text-wrapper">,</div>
+                </div>
+                <div class="line-2">
+                    <div class="text-wrapper">I</div>
+                    <div class="text-wrapper">'</div>
+                    <div class="text-wrapper">m</div>
+                    &nbsp;
+                    <div class="text-wrapper">S</div>
+                    <div class="text-wrapper">a</div>
+                    <div class="text-wrapper">n</div>
+                    <div class="text-wrapper">a</div>
+                    <div class="text-wrapper">t</div>
+                    <div class="text-wrapper">,</div>
+                </div>
+                <div class="line-3">
+                    <div class="text-wrapper">W</div>
+                    <div class="text-wrapper">e</div>
+                    <div class="text-wrapper">b</div>
+                    &nbsp;
+                    <div class="text-wrapper">d</div>
+                    <div class="text-wrapper">e</div>
+                    <div class="text-wrapper">v</div>
+                    <div class="text-wrapper">e</div>
+                    <div class="text-wrapper">l</div>
+                    <div class="text-wrapper">o</div>
+                    <div class="text-wrapper">p</div>
+                    <div class="text-wrapper">e</div>
+                    <div class="text-wrapper">r</div>
+                    <div class="text-wrapper">.</div>
+                </div> 
+                <div class="line-4">Front end developer</div> 
+                <div class="contact-btn-wrapper cp">
+                    <div class="btn-text primary-text">Contact</div>
+                </div>              
+            </div>
+            <div class="letter-wrapper">
+                <svg viewbox="0 0 1350 600">
+                    <text id="initial-2" x="50%" y="50%"  text-anchor="middle">
+                        S
+                    </text>
+                </svg>
+            </div>
+        </div>
+        <!-- HOME END -->
+        
+
     </div>
 
 
     <!-- JS Files -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="./js/custom.js"></script>
+    <script type="text/javascript">
+        var text1 = document.getElementById('initial-1');
+        var text2= document.getElementById('initial-2');
+        var transparentColor = 'transparent'
+        var shadowColor = '#ee4851'
+        var shadow = '';
+        for (let i = 0; i < 5; i++) {
+            shadow += (shadow ? ',' : '') + i*(1) + 'px ' + i*1 + 'px 0 ' + shadowColor
+        }
+        var shadow2 = '';
+        for (let i = 0; i < 12; i++) {
+            shadow2 += (shadow2 ? ',' : '') + i*(-1) + 'px ' + i*1 + 'px 0 ' + transparentColor
+        }
+        text1.style.textShadow = shadow;
+        text2.style.textShadow = shadow2;
+        setTimeout(() => {
+            text2.style.textShadow = text2.style.textShadow.replace(/transparent/g, shadowColor);
+        }, 500);
+    </script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="social-media-wrapper flexbox">
+    <div class="media-icon twitter">
+        <img src="./icons/facebook-50-white.png">
+    </div>
+    <div class="media-icon linked-in">
+        <img src="./icons/linkedin-50-white.png">
+    </div>
+    <div class="media-icon instagram">
+        <img src="./icons/instagram-50-white.png">
+    </div>
+</div> -->

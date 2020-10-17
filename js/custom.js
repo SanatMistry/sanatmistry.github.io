@@ -1,7 +1,20 @@
+const Tab = {
+    PROFILE: 1,
+    SKILLS: 2,
+    EXPERIENCE: 3,
+    PROJECTS: 4,
+    CONTACT: 5
+}
+
 function onPageLoad() {
-    // setTimeout(() => {
-    //     loadPage()
-    // }, 3500);
+    var letters = jQuery('.text-wrapper')
+    for (let i = 0; i < letters.length; i++) {
+        let el = jQuery(letters[i])
+        el.addClass('rubberband-animation');
+        setTimeout(() => {
+            el.removeClass('rubberband-animation');
+        }, 1000);
+    }
 }
 
 function loadPage() {
@@ -18,6 +31,12 @@ function moveCursor(e) {
         $('#cursor').css({left: e.clientX + 'px'})
     }, 200);
 }
+
+// function switchTab(tab) {
+//     switch(tab) {
+//         case TAB.PROFILE
+//     }
+// } 
 
 function navigateHome() {
     jQuery('html,body').animate({scrollTop: 0}, 'fast');
@@ -66,3 +85,26 @@ function closeMenu() {
     jQuery(".navigation-menu-btn").show();
     jQuery(".navigation-menu").hide();
 }
+
+jQuery('.text-wrapper').on('mouseover', (event) => {
+    var el = jQuery(event.target)
+    el.addClass('rubberband-animation');
+    setTimeout(() => {
+        el.removeClass('rubberband-animation');
+    }, 1000);
+})
+
+jQuery('#menu').on('click', () => {
+    var el = jQuery('#menu')
+    var navBar = jQuery('.nav-item-wrapper')
+    if (el[0].classList.contains('close')) {
+        el.removeClass('close');
+        el.addClass('open');
+        navBar.removeClass('open');
+    } else {
+        el.addClass('close');
+        el.removeClass('open');
+        navBar.addClass('open')
+
+    }
+})
