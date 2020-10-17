@@ -7,14 +7,28 @@ const Tab = {
 }
 
 function onPageLoad() {
+    showRubberAnimation(0);
+}
+
+function showRubberAnimation(initialOpacity) {
     var letters = jQuery('.text-wrapper')
-    for (let i = 0; i < letters.length; i++) {
-        let el = jQuery(letters[i])
-        el.addClass('rubberband-animation');
-        setTimeout(() => {
-            el.removeClass('rubberband-animation');
-        }, 1000);
-    }
+    jQuery('.text-wrapper').css({opacity: initialOpacity});
+    var count = 0;
+    var interval = setInterval(() => {
+        if (count < letters.length) {
+            let el = jQuery(letters[count])
+            el.css({opacity: 1})
+            el.addClass('rubberband-animation');
+            el.addClass('primary-text');
+            setTimeout(() => {
+                el.removeClass('rubberband-animation');
+                el.removeClass('primary-text');
+            }, 1000);
+            count++;
+        } else {
+            window.clearInterval(interval)
+        }
+    }, 100);
 }
 
 function loadPage() {
@@ -32,49 +46,6 @@ function moveCursor(e) {
     }, 200);
 }
 
-// function switchTab(tab) {
-//     switch(tab) {
-//         case TAB.PROFILE
-//     }
-// } 
-
-function navigateHome() {
-    jQuery('html,body').animate({scrollTop: 0}, 'fast');
-    jQuery('.nav-item').removeClass('nav-item-selected');
-    jQuery('#home-nav').addClass('nav-item-selected');
-}
-
-function navigateProfile() {
-    closeMenu();
-    jQuery('html,body').animate({scrollTop: jQuery("#profile").offset().top}, 'fast');
-    jQuery('.nav-item').removeClass('nav-item-selected');
-    jQuery('#profile-nav').addClass('nav-item-selected');
-}
-
-function navigateSkills() {
-    closeMenu();
-    jQuery('html,body').animate({scrollTop: jQuery('#skills').offset().top}, 'fast');
-    jQuery('.nav-item').removeClass('nav-item-selected');
-    jQuery('#skills-nav').addClass('nav-item-selected');
-}
-function navigateExp() {
-    closeMenu();
-    jQuery('html,body').animate({scrollTop: jQuery('#experience').offset().top}, 'fast');
-    jQuery('.nav-item').removeClass('nav-item-selected');
-    jQuery('#exp-nav').addClass('nav-item-selected');
-}
-function navigateProjects() {
-    closeMenu();
-    jQuery('html,body').animate({scrollTop: jQuery('#projects').offset().top}, 'fast');
-    jQuery('.nav-item').removeClass('nav-item-selected');
-    jQuery('#projects-nav').addClass('nav-item-selected');
-}
-function navigateHireMe() {
-    closeMenu();
-    jQuery('html,body').animate({scrollTop: jQuery('#hireMe').offset().top}, 'fast');
-    jQuery('.nav-item').removeClass('nav-item-selected');
-    jQuery('#comtact-nav').addClass('nav-item-selected');
-}
 
 function openMenu() {
     jQuery(".navigation-menu-btn").hide();
@@ -89,9 +60,28 @@ function closeMenu() {
 jQuery('.text-wrapper').on('mouseover', (event) => {
     var el = jQuery(event.target)
     el.addClass('rubberband-animation');
+    if (el[0].classList.contains('primary-text')) {
+        el.removeClass('primary-text');
+    } else if (el[0].classList.contains('secondary-text')) {
+        el.removeClass('secondary-text');
+        el.addClass('primary-text');
+    } else {    
+        el.addClass('secondary-text');
+    }
     setTimeout(() => {
         el.removeClass('rubberband-animation');
     }, 1000);
+
+    setTimeout(() => {
+        if (el[0].classList.contains('primary-text') || el[0].classList.contains('secondary-text')) {
+            el.addClass('rubberband-animation');
+            setTimeout(() => {
+                el.removeClass('primary-text');
+                el.removeClass('secondary-text');
+                el.removeClass('rubberband-animation');
+            }, 1000);
+        }
+    }, 5000);
 })
 
 jQuery('#menu').on('click', () => {
@@ -105,6 +95,5 @@ jQuery('#menu').on('click', () => {
         el.addClass('close');
         el.removeClass('open');
         navBar.addClass('open')
-
     }
 })

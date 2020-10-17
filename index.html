@@ -21,7 +21,7 @@
 
         <!-- NAVIGATION PANEL START -->
         <div class="navigation-panel flexbox">
-            <div class="initial-wrapper">
+            <div class="initial-wrapper cp" onclick = "showRubberAnimation(1)">
                 <div id="initial-1" class="logo">S.</div>
                 <div class="name">Sanat</div>
             </div>
@@ -69,7 +69,7 @@
 
         <!-- HOME START -->
         <div class="home-container flexbox">
-            <div class="home-content">
+            <div class="home-content flexbox-left">
                 <div class="line-1">
                     <div class="text-wrapper">H</div>
                     <div class="text-wrapper">i</div>
@@ -80,12 +80,12 @@
                     <div class="text-wrapper">'</div>
                     <div class="text-wrapper">m</div>
                     &nbsp;
-                    <div class="text-wrapper">S</div>
-                    <div class="text-wrapper">a</div>
-                    <div class="text-wrapper">n</div>
-                    <div class="text-wrapper">a</div>
-                    <div class="text-wrapper">t</div>
-                    <div class="text-wrapper">,</div>
+                    <div class="text-wrapper primary-text">S</div>
+                    <div class="text-wrapper primary-text">a</div>
+                    <div class="text-wrapper primary-text">n</div>
+                    <div class="text-wrapper primary-text">a</div>
+                    <div class="text-wrapper primary-text">t</div>
+                    <div class="text-wrapper primary-text">,</div>
                 </div>
                 <div class="line-3">
                     <div class="text-wrapper">W</div>
@@ -105,11 +105,11 @@
                 </div> 
                 <div class="line-4">Front end developer</div> 
                 <div class="contact-btn-wrapper cp">
-                    <div class="btn-text primary-text">Contact</div>
+                    <div class="btn-text">Contact me !</div>
                 </div>              
             </div>
             <div class="letter-wrapper">
-                <svg viewbox="0 0 1350 600">
+                <svg viewbox="0 0 2000 800">
                     <text id="initial-2" x="50%" y="50%"  text-anchor="middle">
                         S
                     </text>
@@ -137,7 +137,7 @@
             shadow += (shadow ? ',' : '') + i*(1) + 'px ' + i*1 + 'px 0 ' + shadowColor
         }
         var shadow2 = '';
-        for (let i = 0; i < 12; i++) {
+        for (let i = 0; i < 20; i++) {
             shadow2 += (shadow2 ? ',' : '') + i*(-1) + 'px ' + i*1 + 'px 0 ' + transparentColor
         }
         text1.style.textShadow = shadow;

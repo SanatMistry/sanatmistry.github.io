@@ -124,6 +124,7 @@
 body {
     margin: 0;
     font-family: quicksandregular;
+    user-select: none;
 }
 
 .page-content {
@@ -131,19 +132,21 @@ body {
 }
 
 /* GENERAL STYLES */
-.cp {
-    cursor: pointer;
-}
+.cp {cursor: pointer;}
+.cd {cursor: default;}
 
 .flexbox {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.flexbox-left {
+    display: flex;
+    flex-direction: column;
+}
 /* TEXT COLOR */
 .primary-text {color: #6cf4d8;}
-.text-secondary {color: #ee4851;}
+.secondary-text {color: #ee4851;}
 
 /* BACKGROUND COLOR */
 .primary-bg {background-color: #0b0a08;}
@@ -161,11 +164,17 @@ body {
 /* ---------------------------------------------------- */
 .home-container {
     min-height: 100vh;
+    background-color:rgba(255,255,255,0.14);
 }
 .home-content {
     cursor: default;
     color: white;
     height: 100%;
+    flex: 1;
+    padding-left: 20px;
+}
+.letter-wrapper {
+    flex: 1;
 }
 
 @keyframes rubberBand {
@@ -200,53 +209,60 @@ body {
 }
 .rubberband-animation {
     animation: rubberBand 1s ease-in;
-    color: #6cf4d8;
 }
 
-.home-content .line-1 {
-    font-size: 2rem;
-    display: flex;
-}
-.home-content .line-2 {
-    font-size: 2rem;
-    display: flex;
-}
+.home-content .line-1,
+.home-content .line-2,
 .home-content .line-3 {
-    font-size: 2rem;
+    font-size: 3rem;
     display: flex;
+    padding: 0 10px;
 }
-.home-content .line-4 {}
+.home-content .line-4 {
+    padding: 0 10px;
+    /* font-size: 1rem; */
+}
 .contact-btn-wrapper {
     position: relative;
     display: flex;
+    margin: 30px 10px;
     justify-content: center;
-    margin-top: 30px;
-    animation: borderAnimationReverse 1s ease-in-out;
     border-radius: 5px;
     border: 2px solid transparent;
+    width: 150px;
+    color: #6cf4d8;
+    animation: borderAnimationReverse 0.5s ease-in-out;
+    border: 2px solid #6cf4d8;
 }
 .contact-btn-wrapper .btn-text{
     padding: 5px 10px;
 }
 .contact-btn-wrapper:hover{
-    animation: borderAnimation 1s ease-in-out;
-    border: 2px solid #6cf4d8;
+    animation: borderAnimation 0.5s ease-in-out;
+    color: black;
+    background-color: #6cf4d8;
 }
 @keyframes borderAnimation {
     from {
-        border: 2px solid transparent;
+        background-color: transparent;
+        color: #6cf4d8;
     }
     to {
-        border: 2px solid #6cf4d8;
+        background-color: #6cf4d8;
+        color: black;
     }
 }
 
 @keyframes borderAnimationReverse {
     from {
-        border: 2px solid #6cf4d8;
+        background-color: #6cf4d8;
+        color: black;
+        /* border: 2px solid #6cf4d8; */
     }
     to {
-        border: 2px solid transparent;   
+        background-color: transparent;
+        color: #6cf4d8;
+        /* border: 2px solid transparent;    */
     }
 }
 
@@ -260,7 +276,7 @@ svg text {
     stroke: #6cf4d8;
     font-size: 50rem;
     font-weight: bold;
-    /* fill: #6cf4d8; */
+    fill: transparent;
     stroke-width: 5;
     animation: line-stroke 3s ease-in-out;
     font-family: raimondRegular;
@@ -306,7 +322,7 @@ svg text {
 /* NAVIGATION PANEL START */
 /* ---------------------------------------------------- */
 .navigation-panel {
-    background-color: rgba(255,255,255,0.14);
+    /* background-color:; */
     color: white;
     min-height: 52px;
     overflow: hidden;
