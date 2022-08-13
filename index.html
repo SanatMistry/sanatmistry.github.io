@@ -1,12 +1,357 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+<head> 
+    <!-- Rersponsive viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Sanat Mistry</title>
+
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sanat Mistry</title>
 </head>
-<body>
-    Hi there :)
+<body onload="onPageLoad()">
+    <!-- Page Content -->
+    <div class="page-content primary-bg">
+
+        <!-- NAVIGATION PANEL START -->
+        <div class="navigation-panel flexbox">
+            <div class="initial-wrapper cp" onclick="changeScreen('home')">
+                <div id="initial-1" class="logo">S.</div>
+                <div class="name">Sanat</div>
+            </div>
+            <div id="menu" class="menu-btn">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+            <div class="nav-item-wrapper flexbox">
+                <div class="nav-item cp" onclick="changeScreen('home')">
+                    <div class="icon">
+                        <img src="./icons/home-50-white.png">
+                    </div>
+                    <div class="title primary-text">HOME</div>
+                </div>
+                <div class="nav-item cp" onclick="changeScreen('about')">
+                    <div class="icon">
+                        <img src="./icons/person-50-white.png">
+                    </div>
+                    <div class="title primary-text">ABOUT</div>
+                </div>
+                <div class="nav-item cp" onclick="changeScreen('skills')">
+                    <div class="icon">
+                        <img src="./icons/rubik's-cube-50-white.png">
+                    </div>
+                    <div class="title primary-text">SKILLS</div>
+                </div>
+                <div class="nav-item cp" onclick="changeScreen('myWork')">
+                    <div class="icon">
+                        <img src="./icons/laptop-coding-50-white.png">
+                    </div>
+                    <div class="title primary-text">MY WORK</div>
+                </div>
+                <div class="nav-item cp" onclick="changeScreen('contact')">
+                    <div class="icon">
+                        <img src="./icons/important-mail-50-white.png">
+                    </div>
+                    <div class="title primary-text">CONTACT</div>
+                </div>
+            </div>
+        </div>
+        <!-- NAVIGATION PANEL END -->
+
+        
+
+        <!-- HOME START -->
+        <div id="home" class="screen-container home-container flexbox">
+            <div class="home-content flexbox-left">
+                <div class="line-1">
+                    <div class="text-wrapper">H</div>
+                    <div class="text-wrapper">i</div>
+                    <div class="text-wrapper">,</div>
+                </div>
+                <div class="line-2">
+                    <div class="text-wrapper">I</div>
+                    <div class="text-wrapper">'</div>
+                    <div class="text-wrapper">m</div>
+                    &nbsp;
+                    <div class="text-wrapper primary-text">S</div>
+                    <div class="text-wrapper primary-text">a</div>
+                    <div class="text-wrapper primary-text">n</div>
+                    <div class="text-wrapper primary-text">a</div>
+                    <div class="text-wrapper primary-text">t</div>
+                    <div class="text-wrapper primary-text">,</div>
+                </div>
+                <div class="line-3">
+                    <div class="text-wrapper">W</div>
+                    <div class="text-wrapper">e</div>
+                    <div class="text-wrapper">b</div>
+                    &nbsp;
+                    <div class="text-wrapper">d</div>
+                    <div class="text-wrapper">e</div>
+                    <div class="text-wrapper">v</div>
+                    <div class="text-wrapper">e</div>
+                    <div class="text-wrapper">l</div>
+                    <div class="text-wrapper">o</div>
+                    <div class="text-wrapper">p</div>
+                    <div class="text-wrapper">e</div>
+                    <div class="text-wrapper">r</div>
+                    <div class="text-wrapper">.</div>
+                </div> 
+                <div class="line-4">Front end developer</div> 
+                <div class="contact-btn-wrapper cp" onclick="changeScreen('contact')">
+                    <div class="btn-text">Contact me !</div>
+                </div>              
+            </div>
+            <div class="letter-wrapper">
+                <svg viewbox="0 0 2000 800">
+                    <text id="initial-2" x="50%" y="50%"  text-anchor="middle">
+                        S
+                    </text>
+                </svg>
+            </div>
+        </div>
+        <!-- HOME END -->
+
+
+
+
+        <!-- ABOUT START -->
+        <div id="about" class="screen-container about-container">
+            <div class="about-content flexbox">
+                <div class="about-title">
+                    <div class="text-wrapper">A</div>
+                    <div class="text-wrapper">b</div>
+                    <div class="text-wrapper">o</div>
+                    <div class="text-wrapper">u</div>
+                    <div class="text-wrapper">t</div>
+                    &nbsp;
+                    <div class="text-wrapper">m</div>
+                    <div class="text-wrapper">e</div>
+                </div>
+                <div class="description">
+                    <p>Professionally connected with the web development industry and information technology for many years.</p>
+                    <p>Well-organised person, problem solver, independent employee with high attention to detail. Fan of MMA, outdoor activities, TV series and, recently, English literature. A family person, father of two fractious boys, therefore remote employment is preferred.</p>
+                    <p>Interested in the entire frontend spectrum and working on ambitious projects with positive people.</p>
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- ABOUT END -->
+
+
+
+        <!-- SKILLS START -->
+        <div id="skills" class="screen-container"></div>
+        <!-- SKILLS END -->
+
+
+
+        <!-- MY WORK START -->
+        <div id="my-work" class="screen-container"></div>
+        <!-- MY WORK END -->
+
+        
+        <!-- CONTACT START -->
+        <div id="contact" class="screen-container">
+            <div class="coffee-cup">
+                <div id="plate">
+                    <div id="cup">
+                        <div id="cupInner"></div>
+                        <div id="coffeBg">
+                        <div id="foamWrapper">
+                            <div id="foam1" class="foam"></div>
+                            <div id="foam2" class="foam"></div>
+                            <div id="foam3" class="foam"></div>
+                            <div id="foam4" class="foam"></div>
+                            <div id="foam5" class="foam"></div>
+                            <div id="foam6" class="foam"></div>
+                            <div id="foam7" class="foam"></div>
+                            <div id="foam8" class="foam"></div>
+                            <div id="foam9" class="foam"></div>
+                            <div id="foam10" class="foam"></div>
+                            <div id="foam11" class="foam"></div>
+                            <div id="foam12" class="foam"></div>
+                            <div id="foam13" class="foam"></div>
+                
+                            <div id="foamMiddleWrapper">
+                            <div id="foamMiddleContainer">
+                            <div id="foamMiddle1" class="foamMiddle"></div>
+                            <div id="foamMiddle2" class="foamMiddle"></div>
+                                <div id="bubbleMiddle1" class="bubble"></div>
+                                <div id="bubbleMiddle2" class="bubble"></div>
+                                <div id="bubbleMiddle3" class="bubble"></div>
+                                <div id="bubbleMiddle4" class="bubble"></div>
+                            </div>
+                            </div>
+                
+                            <div id="bubble1" class="bubble"></div>
+                            <div id="bubble2" class="bubble"></div>
+                            <div id="bubble3" class="bubble"></div>
+                            <div id="bubble4" class="bubble"></div>
+                            <div id="bubble5" class="bubble"></div>
+                            <div id="bubble6" class="bubble"></div>
+                            <div id="bubble7" class="bubble"></div>
+                            <div id="bubble8" class="bubble"></div>
+                            <div id="bubble9" class="bubble"></div>
+                            <div id="bubble10" class="bubble"></div>
+                            <div id="bubble11" class="bubble"></div>
+                            <div id="bubble12" class="bubble"></div>
+                            <div id="bubble13" class="bubble"></div>
+                            <div id="bubble14" class="bubble"></div>
+                            <div id="bubble15" class="bubble"></div>
+                
+                            <div id="bubbleSmall1" class="bubbleSmall"></div>
+                            <div id="bubbleSmall2" class="bubbleSmall"></div>
+                            <div id="bubbleSmall3" class="bubbleSmall"></div>
+                            <div id="bubbleSmall4" class="bubbleSmall"></div>
+                            <div id="bubbleSmall5" class="bubbleSmall"></div>
+                            <div id="bubbleSmall6" class="bubbleSmall"></div>
+                            <div id="bubbleSmall7" class="bubbleSmall"></div>
+                            <div id="bubbleSmall8" class="bubbleSmall"></div>
+                
+                        </div>
+                        <div id="innerShadow"></div>
+                        <div id="glow"></div>
+                        </div>
+                    </div>
+                    <div id="handle"></div>
+                    </div>
+                    <div id="steamWrapper">
+                    <div id="steam"></div>
+                    </div>
+                    <svg width="0" height="0" >
+                        <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" id="blurFilter"/>
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -5" result="goo" />
+                            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                        </filter>
+                        </defs>
+                    </svg>
+                    
+                    <svg width="0" height="0" >
+                        <defs>
+                        <filter id="scatter">
+                            <feTurbulence baseFrequency="10.9" type="fractalNoise" numOctaves="1"/>
+                            <feDisplacementMap in="SourceGraphic" xChannelSelector="G" yChannelSelector="B" scale="20"/>
+                            <feComposite operator="in" in2="finalMask"/>
+                        </filter>
+                        </defs>
+                    </svg>
+                
+                    <svg width="0" height="0" >
+                    <filter id="fog">
+                        <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+                        <feDisplacementMap in="SourceGraphic" scale="180" />
+                    </filter>
+                    </svg>
+            </div>
+            <div class="contact-content">
+                <div class="contact-title">
+                    <div class="text-wrapper">C</div>
+                    <div class="text-wrapper">o</div>
+                    <div class="text-wrapper">n</div>
+                    <div class="text-wrapper">t</div>
+                    <div class="text-wrapper">a</div>
+                    <div class="text-wrapper">c</div>
+                    <div class="text-wrapper">t</div>
+                    &nbsp;
+                    <div class="text-wrapper">m</div>
+                    <div class="text-wrapper">e</div>
+                </div>
+                <div class="contact-description">
+                    <p>I am interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to contact me.</p>
+                </div>
+                <div class="contact-description">
+                    <p>The coffee is on me :)</p>
+                </div>
+                <div class="social-media-links flexbox">                    
+                    <div class="sm-link cp">
+                        <a href="https://linkedin.com/in/sanat-mistry-288245151"  target="blank">
+                            <img src="./icons/icons8-linkedin-50.png" alt="Linked in">
+                        </a>
+                    </div>
+                    <!-- <div class="sm-link cp">
+                        <a>
+                            <img src="./icons/icons8-facebook-50.png" alt="Facebook">
+                        </a>
+                    </div> -->
+                    <div class="sm-link cp">
+                        <a href="https://twitter.com/Sanatmistry5" target="blank">
+                            <img src="./icons/icons8-twitter-squared-50.png" alt="Instagram">
+                        </a>
+                    </div>
+                    <div class="sm-link cp">
+                        <a href="https://www.instagram.com/sanat_mistry/"  target="blank">
+                            <img src="./icons/icons8-instagram-old-50.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div> 
+            </div>
+           
+        </div>
+        <!-- CONTACT END -->
+
+        
+
+    </div>
+
+
+    <!-- JS Files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./js/custom.js"></script>
+    <script type="text/javascript">
+        var text1 = document.getElementById('initial-1');
+        var text2= document.getElementById('initial-2');
+        var transparentColor = 'transparent'
+        var shadowColor = '#ee4851'
+        var shadow = '';
+        for (let i = 0; i < 5; i++) {
+            shadow += (shadow ? ',' : '') + i*(1) + 'px ' + i*1 + 'px 0 ' + shadowColor
+        }
+        var shadow2 = '';
+        for (let i = 0; i < 20; i++) {
+            shadow2 += (shadow2 ? ',' : '') + i*(-1) + 'px ' + i*1 + 'px 0 ' + transparentColor
+        }
+        text1.style.textShadow = shadow;
+        text2.style.textShadow = shadow2;
+        setTimeout(() => {
+            text2.style.textShadow = text2.style.textShadow.replace(/transparent/g, shadowColor);
+        }, 500);
+    </script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="social-media-wrapper flexbox">
+    <div class="media-icon twitter">
+        <img src="./icons/facebook-50-white.png">
+    </div>
+    <div class="media-icon linked-in">
+        <img src="./icons/linkedin-50-white.png">
+    </div>
+    <div class="media-icon instagram">
+        <img src="./icons/instagram-50-white.png">
+    </div>
+</div> -->
